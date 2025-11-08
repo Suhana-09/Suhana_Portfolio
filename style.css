@@ -380,7 +380,7 @@ header {
 
   .nav-menu li a {
     color: white;
-    font-size: 40px; /* larger text for readability */
+    font-size: 30px; /* larger text for readability */
     font-weight: 700;
     letter-spacing: 0.9px;
     text-decoration: none;
