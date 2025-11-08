@@ -106,3 +106,50 @@ function moveSlide(direction) {
   const offset = -currentSlide * 100;
   document.querySelector(".cert-slider").style.transform = `translateX(${offset}%)`;
 }
+
+// ===== Hamburger Navigation Toggle =====
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("nav-menu");
+const overlay = document.getElementById("overlay");
+// ===== Close menu when a link is clicked =====
+document.querySelectorAll(".nav-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("show");
+    overlay.classList.remove("active");
+    navToggle.textContent = "☰";
+  });
+});
+
+
+navToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+  overlay.classList.toggle("active");
+  navToggle.textContent = navMenu.classList.contains("show") ? "✖" : "☰";
+});
+
+overlay.addEventListener("click", () => {
+  navMenu.classList.remove("show");
+  overlay.classList.remove("active");
+  navToggle.textContent = "☰";
+});
+// ===== FORCE CHATBOT TO BOTTOM-LEFT (EVEN IF SCRIPTED) =====
+const moveChatbotToLeft = () => {
+  const chatbot = document.querySelector("iframe[title*='chat'], iframe[title*='Chat'], iframe[src*='chat'], div[style*='Ask me anything']");
+  if (chatbot) {
+    chatbot.style.left = "20px";
+    chatbot.style.right = "auto";
+    chatbot.style.bottom = "20px";
+    chatbot.style.position = "fixed";
+    chatbot.style.zIndex = "3000";
+    chatbot.style.transform = "none";
+  }
+};
+
+// initial check after load
+window.addEventListener("load", () => {
+  moveChatbotToLeft();
+
+  // re-apply every second in case the widget re-injects styles
+  setInterval(moveChatbotToLeft, 1000);
+});
+
