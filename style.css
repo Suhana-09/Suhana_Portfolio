@@ -327,3 +327,89 @@ header {
   right: auto !important;
   z-index: 3000 !important;
 }
+/* ===== MOBILE SLIDING MENU (Smooth & Fully Hidden) ===== */
+/* ===== COMPACT SLIDING MENU (Perfect Size & Centered Links) ===== */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -230px; /* hides completely off-screen */
+    height: 100vh;
+    width: 10px;
+    background: linear-gradient(180deg, #2E8B57 0%, #4fa879 100%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 25px; /* bring items slightly inward */
+    gap: 25px;
+    border-radius: 15px 0 0 15px;
+    box-shadow: -2px 0 20px rgba(0, 0, 0, 0.25);
+    transition: right 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1100;
+  }
+
+  .nav-menu.show {
+    right: 0; /* slides in */
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-menu li {
+    list-style: none;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.4s ease;
+  }
+
+  /* fade-in sequence */
+  .nav-menu.show li:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateX(0); }
+  .nav-menu.show li:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateX(0); }
+  .nav-menu.show li:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateX(0); }
+  .nav-menu.show li:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateX(0); }
+  .nav-menu.show li:nth-child(5) { transition-delay: 0.5s; opacity: 1; transform: translateX(0); }
+  .nav-menu.show li:nth-child(6) { transition-delay: 0.6s; opacity: 1; transform: translateX(0); }
+
+  .nav-menu li a {
+    color: white;
+    font-size: 100px; /* larger text for readability */
+    font-weight: 900;
+    letter-spacing: 2.0px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu li a:hover {
+    color: #ffe6ff;
+    transform: scale(1.05);
+  }
+
+  /* background overlay */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+  }
+
+  #overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
