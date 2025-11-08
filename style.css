@@ -21,38 +21,7 @@ body {
   left: 0;
 }
 
-/* ===== NAVIGATION BAR ===== */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(46, 139, 87, 0.95);
-  padding: 10px 0;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li { margin: 0 15px; }
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  transition: color 0.3s;
-}
-
-nav ul li a.active,
-nav ul li a:hover { color: #b03eee; }
 
 /* ===== INTRO SPLASH ===== */
 #intro {
@@ -252,4 +221,109 @@ header {
     margin-bottom: 10px;
     padding-bottom: 10px;
   }
+}
+
+/* ===== Navigation Bar (Final Clean Version) ===== */
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #2E8B57;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+.nav-toggle {
+  color: #ffffff;
+  font-size: 30px;
+  cursor: pointer;
+  display: block;
+  z-index: 1100;
+  position: absolute;
+  right: 60px;   /* 👈 moved slightly left from the edge */
+  top: 12px;
+}
+
+
+/* Menu (hidden by default) */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  background: rgba(46, 139, 87, 0.97);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  padding-right: 30px;
+  transition: right 0.4s ease-in-out;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+}
+
+.nav-menu li {
+  list-style: none;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #f7c5ff;
+}
+
+.nav-menu.show {
+  right: 0;
+}
+
+/* Dim background when menu opens */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 900;
+  transition: all 0.3s ease-in-out;
+}
+
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Keep chatbot above nav */
+/* --- Keep chatbot above navigation menu --- */
+/* --- Move chatbot to bottom-left --- */
+/* ===== FORCE CHATBOT TO BOTTOM-LEFT CORNER ===== */
+/* ===== Move chatbot to bottom-left ===== */
+#chatbot-icon,
+#chatbot-window {
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 20px !important;      /* 👈 forces it to the left side */
+  right: auto !important;
+  z-index: 3000 !important;
 }
