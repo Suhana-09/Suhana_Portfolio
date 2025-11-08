@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suhana | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Intro Splash -->
+  <div id="intro">
+    <h1>👋 Welcome</h1>
+    <h2>Hi, I'm <span class="highlight">Suhana S</span></h2>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content" class="hidden">
+    <header>
+      <h1>Suhana S 👩‍💻</h1>
+
+      <p>Aspiring Software Developer | CSE Student (Graduating 2026)</p>
+      <a href="Suhana_S_Resume.pdf" target="_blank" class="resume-btn">📄 View My Resume</a>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="row">
+      <div class="title">About Me</div>
+      <div class="content">
+       Final-year Computer Science and Engineering student with a strong foundation in software development and a passion for technology. Skilled in Java, C, and basic Python, with a growing interest in modern web and cloud technologies. Experienced in collaborating on impactful projects and dedicated to delivering clean, efficient, and scalable solutions.
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="row">
+      <div class="title">Skills</div>
+      <div class="content">
+        <ul>
+          <li><b>Programming:</b> Java, C, Basic Python</li>
+          <li><b>Web:</b> HTML, CSS, <React class="js"></React></li>
+          <li><b>Databases:</b> SQL</li>
+          <li><b>Tools:</b> ServiceNow, Git, GitHub, VS Code, Eclipse</li>
+          <li><b>Concepts:</b> DSA, OOP</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="row">
+      <div class="title">Projects</div>
+      <div class="content">
+        <div class="project">
+          <h3>Alumni Management System</h3>
+          <p>Responsive system with authentication, alumni filtering, and event registration. 
+          <a href="https://github.com/Suhana09/alumni_management_system" target="_blank">View on GitHub</a></p>
+        </div>
+        <div class="project">
+        <h3>Day Capsule Scheduler (College Calendar of Events)</h3>
+        <p>
+          Created a lightweight pop-up application to display semester-wise college events. Enabled users to select date, month, and year, then view scheduled academic activities via GUI.
+        </p>
+      </div>
+      <div class="project">
+        <h3>AI Financial Advisor Lite</h3>
+        <p>
+          Built during a college hackathon, this AI-based project provides simplified financial advice using trained models for expense prediction and budgeting insights.
+        </p>
+      </div>
+        <div class="project">
+          <h3>Voting System using Blockchain</h3>
+          <p>Blockchain-based secure, transparent, and tamper-proof voting system.</p>
+        </div>
+      </div>
+    </section>
+
+   <!-- Certifications -->
+<section id="certifications" class="row">
+  <div class="title">Certifications</div>
+  <div class="content">
+    <div class="cert-carousel">
+      <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
+
+      <div class="cert-slider">
+        <div class="cert-item"><img src="Servicenow CSA.jpeg" alt="Certification 1"></div>
+        <div class="cert-item"><img src="Oracle Gen AI.jpeg" alt="Certification 2"></div>
+        <div class="cert-item"><img src="IoT nptel.jpeg" alt="Certification 3"></div>
+        <div class="cert-item"><img src="DBMS NPTEL.jpeg" alt="Certification 4"></div>
+        <div class="cert-item"><img src="GuviCertification - R71eV131K7xr12XF78.png" alt="Certification 5"></div>
+        <div class="cert-item"><img src="Simplilearn Gen AI.jpeg" alt="Certification 5"></div>
+        <div class="cert-item"><img src="Power BI.jpeg" alt="Certification 5"></div>
+        
+      </div>
+
+      <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Achievements -->
+    <section id="achievements" class="row">
+      <div class="title">Achievements</div>
+      <div class="content">
+        <ul>
+          <li>Secured <b>3 ⭐⭐⭐ in Java</b> on HackerRank</li>
+          <li>Solved <b>300+ coding problems</b> on CodeChef</li>
+          <li>Developed <b>AI Financial Advisor Lite</b> project in a college hackathon</li>
+          <li>Showcased <b>Smart Blind Stick</b> at Project Exhibition – SCINOVA</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="row">
+      <div class="title">Contact</div>
+      <div class="content">
+        <p>Email: <a href="mailto:suhanasuhana038@gmail.com">suhanasuhana038@gmail.com</a></p>
+        <p>
+          <a href="https://www.linkedin.com/in/suhana-s-0805012a4/" target="_blank">LinkedIn</a> |
+          <a href="https://github.com/Suhana-09" target="_blank">GitHub</a> |
+          <a href="https://leetcode.com/u/Suhana09/" target="_blank">LeetCode</a> |
+          <a href="https://www.hackerrank.com/profile/suhanasuhana038" target="_blank">HackerRank</a> |
+          <a href="https://www.codechef.com/users/apt_vivid_73" target="_blank">CodeChef</a>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Chatbot Floating Button -->
+  <div id="chatbot-icon" onclick="toggleChat()">💬</div>
+
+  <!-- Chatbot Window -->
+  <div id="chatbot-window">
+    <div id="chatbox">
+      <div id="chatlogs"></div>
+      <input type="text" id="userInput" placeholder="Ask me anything..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <!-- Particle.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
