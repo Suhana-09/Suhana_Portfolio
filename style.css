@@ -343,7 +343,7 @@ header {
     right: -230px; /* hides completely off-screen */
     height: 100vh;
     width: 250px;
-    background: linear-gradient(180deg, #2E8B57 0%, #4fa879 100%);
+    background: linear-gradient(180deg, #a4d7b2 0%, #9ee0c1 100%);
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -379,13 +379,15 @@ header {
   .nav-menu.show li:nth-child(6) { transition-delay: 0.6s; opacity: 1; transform: translateX(0); }
 
   .nav-menu li a {
-    color: white;
-    font-size: 30px; /* larger text for readability */
-    font-weight: 700;
-    letter-spacing: 0.9px;
-    text-decoration: none;
-    transition: all 0.3s ease;
+  color: #111111;            /* deep dark gray/black for strong contrast */
+  font-size: 24px;           /* larger text */
+  font-weight: 800;          /* bolder for emphasis */
+  letter-spacing: 1px;       /* slightly spaced for neatness */
+  text-transform: uppercase; /* optional - gives clean all-caps look */
+  text-decoration: none;
+  transition: all 0.3s ease;
   }
+
 
   .nav-menu li a:hover {
     color: #ffe6ff;
@@ -411,6 +413,7 @@ header {
     visibility: visible;
   }
 }
+
 
 
 
