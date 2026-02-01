@@ -2,9 +2,9 @@
 const responses = {
   "hi": "Hello! 👋 I’m Suhana’s portfolio assistant. Ask me about my skills, projects, or resume.",
   "who are you": "I am Suhana, a CSE student (CGPA: 9.22) passionate about software development.",
-  "skills": "I know Java, C, SQL, HTML, CSS, Git, and have strong DSA and OOP knowledge.",
+  "skills": "I know Java, Python, SQL, HTML, CSS, Git, and have strong DSA and OOP knowledge.",
   "projects": "I’ve built: 1) Alumni Management System, 2) Day Capsule Scheduler, 3) Voting System using Blockchain.",
-  "resume": "Here’s my resume: <a href='resume.pdf' target='_blank'>View Resume</a>",
+  "resume": "Here’s my resume: <a href='Suhana_S_Resume.pdf' target='_blank'>View Resume</a>",
   "contact": "You can email me at suhanasuhana038@gmail.com or visit my LinkedIn profile."
 };
 
@@ -152,4 +152,5 @@ window.addEventListener("load", () => {
   // re-apply every second in case the widget re-injects styles
   setInterval(moveChatbotToLeft, 1000);
 });
+
 
